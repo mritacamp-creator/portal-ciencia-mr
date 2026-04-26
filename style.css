@@ -190,3 +190,47 @@ main { width: 100%; max-width: 1200px; }
     #cartao-foco { width: 95%; max-height: 80vh; }
     #botao-fechar { top: 10px; right: 10px; font-size: 30px; width: 40px; height: 40px; }
 }
+/* =========================================
+   MICROINTERAÇÕES: ANIMAÇÕES DOS ÍCONES
+   ========================================= */
+
+/* Transforma os ícones em blocos para aceitarem animação corretamente */
+.cartao-modulo .icone {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* 1. Animação do Dinossauro (Caminhando/Balançando) */
+@keyframes andarDino {
+    0% { transform: translateX(0px) rotate(0deg); }
+    25% { transform: translateX(5px) rotate(-10deg); }
+    50% { transform: translateX(10px) rotate(0deg); }
+    75% { transform: translateX(5px) rotate(10deg); }
+    100% { transform: translateX(0px) rotate(0deg); }
+}
+
+.modulo-paleo:hover .icone {
+    animation: andarDino 0.6s infinite ease-in-out;
+}
+
+/* 2. Animação de Saturno (Girando 360 graus) */
+@keyframes girarSaturno {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.modulo-astro:hover .icone {
+    animation: girarSaturno 4s infinite linear;
+}
+
+/* 3. Animação do DNA (Rotação 3D no eixo Y simulando a hélice) */
+@keyframes girarDNA {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+.modulo-bio:hover .icone {
+    /* Perspective dá a sensação de profundidade 3D */
+    perspective: 1000px; 
+    animation: girarDNA 2s infinite linear;
+}
