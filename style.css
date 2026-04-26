@@ -90,7 +90,45 @@ main { width: 100%; max-width: 1200px; }
 
 .sessao-era { padding: 40px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); width: 100%; }
 .titulo-era { font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; }
-.descricao-era { color: #a4b0be; margin-bottom: 30px; font-style: italic; }
+/* --- PAINÉIS GEOLÓGICOS DAS ERAS --- */
+.painel-geologico {
+    background: rgba(30, 39, 46, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid;
+    max-width: 1000px;
+}
+
+.borda-triassico { border-left-color: #e1b12c; }
+.borda-jurassico { border-left-color: #4cd137; }
+.borda-cretaceo { border-left-color: #e84118; }
+
+.painel-dados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dado-destaque {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #f1f2f6;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.painel-geologico p {
+    color: #a4b0be;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
 
 /* Cores das Eras */
 .triassico-cor { color: #e1b12c; }
