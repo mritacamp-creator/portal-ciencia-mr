@@ -1,0 +1,192 @@
+/* RESET E CORES GERAIS */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+body {
+    background-color: #0b0e14;
+    background-image: radial-gradient(circle at 50% 0%, #1e272e 0%, #0b0e14 70%);
+    color: #f1f2f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* CABEÇALHO (HERO) */
+.hero-section { text-align: center; padding: 80px 20px 40px; width: 100%; max-width: 800px; position: relative; }
+.hero-conteudo h1 { font-size: 3.5rem; background: linear-gradient(90deg, #00a8ff, #9c88ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px; }
+.subtitulo { font-size: 1.2rem; color: #4cd137; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; }
+.descricao-portal { font-size: 1.1rem; line-height: 1.6; color: #a4b0be; }
+
+/* GRID DE MÓDULOS (Portal Inicial) */
+.container-modulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 50px;
+}
+
+.cartao-modulo {
+    background: rgba(30, 39, 46, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: #f1f2f6;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.cartao-modulo:hover { transform: translateY(-10px); }
+.modulo-paleo:hover { border-color: #4cd137; box-shadow: 0 10px 30px rgba(76, 209, 55, 0.2); }
+.modulo-astro:hover { border-color: #00a8ff; box-shadow: 0 10px 30px rgba(0, 168, 255, 0.2); }
+.modulo-bio:hover { border-color: #e84118; box-shadow: 0 10px 30px rgba(232, 65, 24, 0.2); }
+
+.icone { font-size: 4rem; margin-bottom: 15px; }
+.cartao-modulo h2 { font-size: 1.8rem; margin-bottom: 10px; }
+.cartao-modulo p { color: #a4b0be; font-size: 1rem; line-height: 1.5; }
+
+/* BADGE EM BREVE */
+.badge { position: absolute; top: 15px; right: -30px; background-color: #e1b12c; color: #2f3640; font-size: 0.8rem; font-weight: bold; padding: 5px 30px; transform: rotate(45deg); }
+
+
+/* --- ESTILOS ESPECÍFICOS: PALEONTOLOGIA --- */
+main { width: 100%; max-width: 1200px; }
+
+.btn-voltar {
+    display: inline-block; padding: 10px 20px; background-color: rgba(255,255,255,0.1); 
+    color: #f1f2f6; text-decoration: none; border-radius: 8px; margin-bottom: 20px;
+    transition: background-color 0.3s; position: absolute; top: 20px; left: 20px;
+}
+.btn-voltar:hover { background-color: rgba(255,255,255,0.2); }
+
+.sessao-era { padding: 40px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); width: 100%; }
+.titulo-era { font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; }
+.descricao-era { color: #a4b0be; margin-bottom: 30px; font-style: italic; }
+
+/* Cores das Eras */
+.triassico-cor { color: #e1b12c; }
+.jurassico-cor { color: #4cd137; }
+.cretaceo-cor { color: #e84118; }
+
+/* TRILHA HORIZONTAL E CARTÕES (A Linha do Tempo) */
+.trilha-cards {
+    display: flex; gap: 30px; padding: 20px 10px; 
+    overflow-x: auto; 
+    flex-wrap: nowrap; 
+    width: 100%;
+}
+
+.cartao-item {
+    flex: 0 0 320px; 
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cartao-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #4cd137;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: #000;
+}
+
+.cartao-item h3 { color: #f1f2f6; font-size: 1.5rem; margin-bottom: 5px; }
+.cartao-item p { color: #a4b0be; font-size: 1rem; }
+
+/* --- JANELA MODAL (CARTÃO DE FOCO) --- */
+#modal-container {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(10, 15, 20, 0.95);
+    backdrop-filter: blur(15px);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000; visibility: hidden; opacity: 0; transition: opacity 0.3s ease;
+}
+
+#modal-container.visivel { visibility: visible; opacity: 1; }
+
+#cartao-foco {
+    width: 90%; max-width: 650px;
+    max-height: 85vh; /* O SEGREDO 1: O cartão nunca será maior que a tela */
+    overflow-y: auto; /* O SEGREDO 2: Cria a barra de rolagem */
+    position: relative;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: transparent;
+}
+
+/* Customizando a barra de rolagem do Modal para ficar elegante */
+#cartao-foco::-webkit-scrollbar { width: 8px; }
+#cartao-foco::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); border-radius: 10px; }
+#cartao-foco::-webkit-scrollbar-thumb { background: #4cd137; border-radius: 10px; }
+
+#modal-container.visivel #cartao-foco { transform: scale(1); }
+
+/* O SEGREDO 3: Botão 'X' fixo na tela (nunca mais vai sumir) */
+#botao-fechar {
+    position: fixed; top: 20px; right: 30px; font-size: 40px; cursor: pointer; color: #fff; 
+    background-color: rgba(0,0,0,0.6); width: 50px; height: 50px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; z-index: 2000;
+    transition: background-color 0.3s, color 0.3s;
+}
+#botao-fechar:hover { background-color: rgba(0,0,0,0.9); color: #ff4757; }
+
+/* VÍDEO NO MODAL */
+.video-destaque {
+    width: 100%;
+    max-width: 500px; 
+    max-height: 35vh; 
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: #000;
+    margin: 0 auto 15px auto; 
+    display: block;
+}
+
+.botao-mutar {
+    background-color: #e1b12c; color: #1e272e; border: none; padding: 8px 20px;
+    font-size: 1rem; border-radius: 8px; cursor: pointer; font-weight: bold;
+    margin-bottom: 20px; transition: all 0.3s; display: inline-block;
+}
+.botao-mutar:hover { background-color: #fbc531; transform: scale(1.05); }
+
+.conteudo-texto-modal {
+    background: linear-gradient(to top, rgba(30, 39, 46, 1), rgba(30, 39, 46, 0.8));
+    padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); text-align: left;
+}
+
+.conteudo-texto-modal h2 { color: #4cd137; font-size: 2.5rem; margin-bottom: 5px; }
+.conteudo-texto-modal .subtitulo { color: #a4b0be; font-size: 1.2rem; margin-bottom: 20px; display: block; font-style: italic; }
+.conteudo-texto-modal .descricao { font-size: 1.1rem; line-height: 1.6; color: #dfe4ea; }
+
+/* RESPONSIVIDADE (CELULARES) */
+@media (max-width: 768px) {
+    .hero-conteudo h1 { font-size: 2.5rem; }
+    .cartao-item { flex: 0 0 280px; }
+    .video-destaque { max-height: 30vh; }
+    #cartao-foco { width: 95%; max-height: 80vh; }
+    #botao-fechar { top: 10px; right: 10px; font-size: 30px; width: 40px; height: 40px; }
+}

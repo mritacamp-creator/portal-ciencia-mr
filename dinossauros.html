@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paleontologia | Portal da Ciência</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero-section">
+        <a href="index.html" class="btn-voltar">⬅ Voltar ao Portal</a>
+        <div class="hero-conteudo">
+            <h1 style="background: linear-gradient(90deg, #4cd137, #e84118); -webkit-background-clip: text;">A Era dos Dinossauros</h1>
+            <p class="descricao-portal">Deslize pelas eras geológicas e descubra os gigantes do passado.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="sessao-era">
+            <h2 class="titulo-era triassico-cor">Período Triássico (252 - 201 milhões de anos atrás)</h2>
+            <p class="descricao-era">O início da era dos dinossauros. Eles ainda eram pequenos e ágeis.</p>
+            <div id="trilha-triassico" class="trilha-cards"></div>
+        </section>
+
+        <section class="sessao-era">
+            <h2 class="titulo-era jurassico-cor">Período Jurássico (201 - 145 milhões de anos atrás)</h2>
+            <p class="descricao-era">A era dos gigantes pescoçudos e dos primeiros grandes predadores.</p>
+            <div id="trilha-jurassico" class="trilha-cards"></div>
+        </section>
+
+        <section class="sessao-era">
+            <h2 class="titulo-era cretaceo-cor">Período Cretáceo (145 - 66 milhões de anos atrás)</h2>
+            <p class="descricao-era">O auge da diversidade, pouco antes da extinção. Lar do T-Rex e Tricerátops.</p>
+            <div id="trilha-cretaceo" class="trilha-cards"></div>
+        </section>
+    </main>
+
+    <div id="modal-container" class="modal-oculto">
+        <div id="cartao-foco">
+            <span id="botao-fechar" onclick="fecharModal()">&times;</span>
+            <div id="conteudo-foco"></div>
+        </div>
+    </div>
+
+    <script src="paleo.js"></script> 
+</body>
+</html>
