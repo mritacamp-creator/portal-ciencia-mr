@@ -47,12 +47,35 @@ body {
 .modulo-astro:hover { border-color: #00a8ff; box-shadow: 0 10px 30px rgba(0, 168, 255, 0.2); }
 .modulo-bio:hover { border-color: #e84118; box-shadow: 0 10px 30px rgba(232, 65, 24, 0.2); }
 
-.icone { font-size: 4rem; margin-bottom: 15px; }
 .cartao-modulo h2 { font-size: 1.8rem; margin-bottom: 10px; }
 .cartao-modulo p { color: #a4b0be; font-size: 1rem; line-height: 1.5; }
 
 /* BADGE EM BREVE */
 .badge { position: absolute; top: 15px; right: -30px; background-color: #e1b12c; color: #2f3640; font-size: 0.8rem; font-weight: bold; padding: 5px 30px; transform: rotate(45deg); }
+
+/* --- NOVOS ESTILOS PARA OS ÍCONES DE VÍDEO --- */
+.icone-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05); 
+}
+
+.video-icone {
+    width: 140%; 
+    height: 140%;
+    object-fit: cover; 
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cartao-modulo:hover .video-icone {
+    transform: scale(1.2); /* O efeito de Zoom elegante quando passa o mouse */
+}
 
 
 /* --- ESTILOS ESPECÍFICOS: PALEONTOLOGIA --- */
@@ -127,8 +150,8 @@ main { width: 100%; max-width: 1200px; }
 
 #cartao-foco {
     width: 90%; max-width: 650px;
-    max-height: 85vh; /* O SEGREDO 1: O cartão nunca será maior que a tela */
-    overflow-y: auto; /* O SEGREDO 2: Cria a barra de rolagem */
+    max-height: 85vh; 
+    overflow-y: auto; 
     position: relative;
     text-align: center;
     transform: scale(0.9);
@@ -136,14 +159,13 @@ main { width: 100%; max-width: 1200px; }
     background-color: transparent;
 }
 
-/* Customizando a barra de rolagem do Modal para ficar elegante */
 #cartao-foco::-webkit-scrollbar { width: 8px; }
 #cartao-foco::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); border-radius: 10px; }
 #cartao-foco::-webkit-scrollbar-thumb { background: #4cd137; border-radius: 10px; }
 
 #modal-container.visivel #cartao-foco { transform: scale(1); }
 
-/* O SEGREDO 3: Botão 'X' fixo na tela (nunca mais vai sumir) */
+/* Botão 'X' fixo na tela */
 #botao-fechar {
     position: fixed; top: 20px; right: 30px; font-size: 40px; cursor: pointer; color: #fff; 
     background-color: rgba(0,0,0,0.6); width: 50px; height: 50px; border-radius: 50%;
@@ -182,6 +204,19 @@ main { width: 100%; max-width: 1200px; }
 .conteudo-texto-modal .subtitulo { color: #a4b0be; font-size: 1.2rem; margin-bottom: 20px; display: block; font-style: italic; }
 .conteudo-texto-modal .descricao { font-size: 1.1rem; line-height: 1.6; color: #dfe4ea; }
 
+/* --- ESTILOS DO NOVO RODAPÉ --- */
+.rodape-principal {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(15, 20, 30, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: auto; 
+    color: #a4b0be;
+    font-size: 0.9rem;
+}
+
 /* RESPONSIVIDADE (CELULARES) */
 @media (max-width: 768px) {
     .hero-conteudo h1 { font-size: 2.5rem; }
@@ -189,39 +224,4 @@ main { width: 100%; max-width: 1200px; }
     .video-destaque { max-height: 30vh; }
     #cartao-foco { width: 95%; max-height: 80vh; }
     #botao-fechar { top: 10px; right: 10px; font-size: 30px; width: 40px; height: 40px; }
-}
-/* =========================================
-   MICROINTERAÇÕES: ANIMAÇÕES DOS ÍCONES
-   ========================================= */
-
-.cartao-modulo .icone {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    /* Define a origem da transformação para o centro exato do emoji */
-    transform-origin: center center;
-}
-
-/* 1. Ilusão de Caminhada (Pulos rápidos alternando os lados) */
-@keyframes caminharDino {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(-8deg); }
-    50% { transform: translateY(0) rotate(0deg); }
-    75% { transform: translateY(-10px) rotate(8deg); }
-}
-
-.modulo-paleo:hover .icone {
-    animation: caminharDino 0.4s infinite linear;
-}
-
-/* 2 e 3. Rotação no PRÓPRIO EIXO (Eixo Y - vertical) */
-@keyframes girarNoEixo {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
-}
-
-.modulo-astro:hover .icone,
-.modulo-bio:hover .icone {
-    perspective: 1000px;
-    /* Gira como um pião no próprio eixo vertical */
-    animation: girarNoEixo 3s infinite linear;
 }
