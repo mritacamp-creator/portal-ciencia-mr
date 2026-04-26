@@ -194,43 +194,34 @@ main { width: 100%; max-width: 1200px; }
    MICROINTERAÇÕES: ANIMAÇÕES DOS ÍCONES
    ========================================= */
 
-/* Transforma os ícones em blocos para aceitarem animação corretamente */
 .cartao-modulo .icone {
     display: inline-block;
     transition: transform 0.3s ease;
+    /* Define a origem da transformação para o centro exato do emoji */
+    transform-origin: center center;
 }
 
-/* 1. Animação do Dinossauro (Caminhando/Balançando) */
-@keyframes andarDino {
-    0% { transform: translateX(0px) rotate(0deg); }
-    25% { transform: translateX(5px) rotate(-10deg); }
-    50% { transform: translateX(10px) rotate(0deg); }
-    75% { transform: translateX(5px) rotate(10deg); }
-    100% { transform: translateX(0px) rotate(0deg); }
+/* 1. Ilusão de Caminhada (Pulos rápidos alternando os lados) */
+@keyframes caminharDino {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-8deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(-10px) rotate(8deg); }
 }
 
 .modulo-paleo:hover .icone {
-    animation: andarDino 0.6s infinite ease-in-out;
+    animation: caminharDino 0.4s infinite linear;
 }
 
-/* 2. Animação de Saturno (Girando 360 graus) */
-@keyframes girarSaturno {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.modulo-astro:hover .icone {
-    animation: girarSaturno 4s infinite linear;
-}
-
-/* 3. Animação do DNA (Rotação 3D no eixo Y simulando a hélice) */
-@keyframes girarDNA {
+/* 2 e 3. Rotação no PRÓPRIO EIXO (Eixo Y - vertical) */
+@keyframes girarNoEixo {
     from { transform: rotateY(0deg); }
     to { transform: rotateY(360deg); }
 }
 
+.modulo-astro:hover .icone,
 .modulo-bio:hover .icone {
-    /* Perspective dá a sensação de profundidade 3D */
-    perspective: 1000px; 
-    animation: girarDNA 2s infinite linear;
+    perspective: 1000px;
+    /* Gira como um pião no próprio eixo vertical */
+    animation: girarNoEixo 3s infinite linear;
 }
