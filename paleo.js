@@ -7,7 +7,7 @@ const dinossaurosData = [
     },
     { 
         id: "herrerassauro", era: "triassico", nome: "Herrerassauro", subtitulo: "O Caçador Primitivo", 
-        animacao: "animacoes/Herrerasaurus",
+        animacao: "animacoes/Herrerasaurus.mp4",
         descricao: "Encontrado na Argentina, este predador viveu há cerca de 230 milhões de anos. Ele podia chegar a 6 metros de comprimento e era um dos maiores carnívoros de sua época.<br><br><strong>Curiosidade:</strong> A mandíbula do Herrerassauro tinha uma articulação dupla especial que permitia deslizar para frente e para trás, ajudando a segurar e engolir presas que se debatiam." 
     },
     { 
@@ -34,7 +34,7 @@ const dinossaurosData = [
     },
     { 
         id: "estegossauro", era: "jurassico", nome: "Estegossauro", subtitulo: "O Tanque de Placas", 
-        animacao: "animacoes/estegossauro.mp4",
+        animacao: "animacoes/Estegossauro.mp4",
         descricao: "Um herbívoro de 9 metros de comprimento que parecia um tanque de guerra blindado. Ele tinha fileiras de enormes placas ósseas nas costas e quatro espinhos mortais na ponta do rabo para se defender dos predadores.<br><br><strong>Curiosidade:</strong> Apesar de ser gigante e assustador, o Estegossauro não era muito inteligente. Seu cérebro tinha o tamanho e o formato exato de uma salsicha ou de uma noz!" 
     },
     { 
@@ -61,7 +61,7 @@ const dinossaurosData = [
     },
     { 
         id: "triceratops", era: "cretaceo", nome: "Tricerátops", subtitulo: "O Rosto de Três Chifres", 
-        animacao: "animacoes/triceratops.mp4",
+        animacao: "animacoes/Triceratops.mp4",
         descricao: "O grande gladiador herbívoro! Ele pesava quase 9 toneladas e tinha um enorme escudo de osso sólido protegendo o pescoço, além de três chifres frontais afiados como lanças.<br><br><strong>Curiosidade:</strong> Ele foi o maior rival do T-Rex. O crânio de um Tricerátops era tão resistente que ocupava quase um terço do tamanho de todo o seu corpo, sendo uma das maiores cabeças de todos os animais terrestres." 
     },
     { 
