@@ -7,7 +7,7 @@ const dinossaurosData = [
     },
     { 
         id: "herrerassauro", era: "triassico", nome: "Herrerassauro", subtitulo: "O Caçador Primitivo", 
-        animacao: "animacoes/herrerassauro.mp4",
+        animacao: "animacoes/Herrerasaurus",
         descricao: "Encontrado na Argentina, este predador viveu há cerca de 230 milhões de anos. Ele podia chegar a 6 metros de comprimento e era um dos maiores carnívoros de sua época.<br><br><strong>Curiosidade:</strong> A mandíbula do Herrerassauro tinha uma articulação dupla especial que permitia deslizar para frente e para trás, ajudando a segurar e engolir presas que se debatiam." 
     },
     { 
