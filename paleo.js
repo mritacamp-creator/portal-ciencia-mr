@@ -39,7 +39,7 @@ const dinossaurosData = [
     },
     { 
         id: "alossauro", era: "jurassico", nome: "Alossauro", subtitulo: "O Leão do Jurássico", 
-        animacao: "animacoes/alossauro.mp4",
+        animacao: "animacoes/allossaurus.mp4",
         descricao: "O superpredador dominante de sua época. Ele media até 12 metros e caçava grandes dinossauros herbívoros. Suas mãos tinham três garras enormes que funcionavam como ganchos de açougueiro.<br><br><strong>Curiosidade:</strong> Ele atacava como se seu crânio fosse um machado! O Alossauro abria a boca de forma impressionante e usava a força do pescoço para 'bater' os dentes na presa, em vez de apenas morder." 
     },
     { 
