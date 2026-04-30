@@ -12,7 +12,7 @@ const dinossaurosData = [
     },
     { 
         id: "celofise", era: "triassico", nome: "Celófise", subtitulo: "O Pequeno Velocista", 
-        animacao: "animacoes/celofise.mp4",
+        animacao: "animacoes/Celofise.mp4",
         descricao: "Um dinossauro esguio e muito ágil que caçava em grandes bandos. Ele media cerca de 3 metros, mas pesava pouquíssimo (uns 20 kg) porque seus ossos eram ocos, como os das aves modernas.<br><br><strong>Curiosidade:</strong> Centenas de esqueletos de Celófise foram encontrados juntos no Novo México (EUA), provando que eles andavam em enormes matilhas para se proteger e caçar." 
     },
     { 
@@ -39,7 +39,7 @@ const dinossaurosData = [
     },
     { 
         id: "alossauro", era: "jurassico", nome: "Alossauro", subtitulo: "O Leão do Jurássico", 
-        animacao: "animacoes/allossaurus.mp4",
+        animacao: "animacoes/allosaurus.mp4",
         descricao: "O superpredador dominante de sua época. Ele media até 12 metros e caçava grandes dinossauros herbívoros. Suas mãos tinham três garras enormes que funcionavam como ganchos de açougueiro.<br><br><strong>Curiosidade:</strong> Ele atacava como se seu crânio fosse um machado! O Alossauro abria a boca de forma impressionante e usava a força do pescoço para 'bater' os dentes na presa, em vez de apenas morder." 
     },
     { 
