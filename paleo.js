@@ -21,7 +21,7 @@ const dinossaurosData = [
         descricao: "Este foi um dos primeiros dinossauros herbívoros gigantes. Com até 10 metros de comprimento, ele podia andar sobre quatro patas, mas se erguia nas patas traseiras para alcançar as folhas mais altas das árvores.<br><br><strong>Curiosidade:</strong> Ele engolia pedras de propósito! Essas pedras ficavam no seu estômago e ajudavam a esmagar as plantas duras que ele comia, funcionando como um 'liquidificador' interno." 
     },
     { 
-        id: "eoraptor", era: "triassico", nome: "Eoraptor", subtitulo: "O Ladrão da Alvorada", 
+        id: "eoraptor", era: "triassico", nome: "eoraptor", subtitulo: "O Ladrão da Alvorada", 
         animacao: "animacoes/eoraptor.mp4",
         descricao: "Com apenas 1 metro de comprimento e o peso de um cachorro pequeno, ele é considerado o 'avô' de quase todos os dinossauros. Ele era onívoro, ou seja, comia tanto plantas quanto pequenos animais.<br><br><strong>Curiosidade:</strong> Seus dentes da frente eram afiados como folhas (para cortar carne), mas os dentes de trás eram chatos e retos (para esmagar plantas). Ele estava pronto para qualquer refeição!" 
     },
@@ -29,7 +29,7 @@ const dinossaurosData = [
     // --- JURÁSSICO ---
     { 
         id: "braquiossauro", era: "jurassico", nome: "Braquiossauro", subtitulo: "O Gigante Pescoçudo", 
-        animacao: "animacoes/braquiossauro.mp4",
+        animacao: "animacoes/Braquiossauro.mp4",
         descricao: "Um verdadeiro titã! Ele podia chegar a 25 metros de comprimento e pesar o equivalente a 10 elefantes juntos. Ao contrário de outros pescoçudos, suas patas dianteiras eram muito maiores que as traseiras, dando a ele uma postura parecida com a de uma girafa.<br><br><strong>Curiosidade:</strong> Seu coração era tão poderoso que precisava bombear sangue com uma força gigantesca para fazer o oxigênio subir pelo seu enorme pescoço até o cérebro!" 
     },
     { 
