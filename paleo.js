@@ -44,7 +44,7 @@ const dinossaurosData = [
     },
     { 
         id: "diplodoco", era: "jurassico", nome: "Diplodoco", subtitulo: "A Cauda de Chicote", 
-        animacao: "animacoes/diplodoco.mp4",
+        animacao: "animacoes/Diplodoco.mp4",
         descricao: "Um dos dinossauros mais compridos que já existiu, chegando a 27 metros! A maior parte desse tamanho era dividida entre seu pescoço imenso e sua cauda extremamente fina e longa.<br><br><strong>Curiosidade:</strong> A ponta de sua cauda podia ser balançada tão rápido que rompia a barreira do som, criando um estalo supersônico alto como um trovão para assustar predadores!" 
     },
     { 
