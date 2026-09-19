@@ -17,7 +17,7 @@ const dinossaurosData = [
     },
     { 
         id: "plateossauro", era: "triassico", nome: "Plateossauro", subtitulo: "O Ancestral dos Gigantes", 
-        animacao: "animacoes/plateossauro.mp4",
+        animacao: "animacoes/Plateossauro.mp4",
         descricao: "Este foi um dos primeiros dinossauros herbívoros gigantes. Com até 10 metros de comprimento, ele podia andar sobre quatro patas, mas se erguia nas patas traseiras para alcançar as folhas mais altas das árvores.<br><br><strong>Curiosidade:</strong> Ele engolia pedras de propósito! Essas pedras ficavam no seu estômago e ajudavam a esmagar as plantas duras que ele comia, funcionando como um 'liquidificador' interno." 
     },
     { 
