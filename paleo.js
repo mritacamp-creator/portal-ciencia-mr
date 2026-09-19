@@ -66,7 +66,7 @@ const dinossaurosData = [
     },
     { 
         id: "velociraptor", era: "cretaceo", nome: "Velociraptor", subtitulo: "O Assassino de Penas", 
-        animacao: "animacoes/velociraptor.mp4",
+        animacao: "animacoes/Velociraptor.mp4",
         descricao: "Esqueça os filmes! O verdadeiro Velociraptor não era maior do que um peru gigante e tinha o corpo todo coberto por penas, parecendo uma grande e perigosa ave que não voava.<br><br><strong>Curiosidade:</strong> Sua principal arma era a 'garra terrível': uma garra curva e afiada de 9 centímetros no segundo dedo de cada pé, que ele usava para perfurar o pescoço de suas vítimas com ataques rápidos e precisos." 
     },
     { 
