@@ -29,7 +29,7 @@ const dinossaurosData = [
     // --- JURÁSSICO ---
     { 
         id: "braquiossauro", era: "jurassico", nome: "Braquiossauro", subtitulo: "O Gigante Pescoçudo", 
-        animacao: "animacoes/Braquiossauro.mp4",
+        animacao: "animacoes/braquiossauro.mp4",
         descricao: "Um verdadeiro titã! Ele podia chegar a 25 metros de comprimento e pesar o equivalente a 10 elefantes juntos. Ao contrário de outros pescoçudos, suas patas dianteiras eram muito maiores que as traseiras, dando a ele uma postura parecida com a de uma girafa.<br><br><strong>Curiosidade:</strong> Seu coração era tão poderoso que precisava bombear sangue com uma força gigantesca para fazer o oxigênio subir pelo seu enorme pescoço até o cérebro!" 
     },
     { 
@@ -49,7 +49,7 @@ const dinossaurosData = [
     },
     { 
         id: "ceratossauro", era: "jurassico", nome: "Ceratossauro", subtitulo: "O Caçador de Chifre", 
-        animacao: "animacoes/ceratossauro.mp4",
+        animacao: "animacoes/Ceratossauro.mp4",
         descricao: "Um carnívoro feroz e muito fácil de reconhecer. Ele tinha um chifre pontudo bem no meio do nariz e pequenas placas ósseas que desciam pelas suas costas, como as de um crocodilo.<br><br><strong>Curiosidade:</strong> Além de caçar dinossauros em terra firme, estudos mostram que o Ceratossauro era um excelente nadador e passava muito tempo caçando peixes e crocodilos pré-históricos em lagos profundos." 
     },
 
