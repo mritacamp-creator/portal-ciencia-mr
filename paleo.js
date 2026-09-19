@@ -71,7 +71,7 @@ const dinossaurosData = [
     },
     { 
         id: "espinossauro", era: "cretaceo", nome: "Espinossauro", subtitulo: "O Pescador Gigante", 
-        animacao: "animacoes/espinossauro.mp4",
+        animacao: "animacoes/Espinossauro.mp4",
         descricao: "Maior, mais longo e mais pesado que o próprio T-Rex! O Espinossauro tinha uma enorme 'vela' de pele e osso nas costas e o focinho alongado, muito parecido com o de um crocodilo moderno.<br><br><strong>Curiosidade:</strong> Foi o primeiro dinossauro conhecido que vivia quase todo o tempo na água. Seus ossos eram muito densos para ele não boiar, permitindo que mergulhasse fundo para caçar peixes gigantes e tubarões de rio." 
     },
     { 
